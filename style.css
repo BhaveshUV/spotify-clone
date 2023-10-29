@@ -16,9 +16,111 @@ body {
     grid-template-columns: 1fr 2fr;
 }
 
+/* Sidebar */
+/* Nav */
 .sidebar {
+    background-color: #000;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.sidebar ul {
+    margin: 0;
+    padding: 0.5rem 0.75rem;
     background-color: #121212;
     border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.sidebar ul li, .library .head>a { /*Style for library-head*/
+    padding: 0.25rem 0.75rem;
+    line-height: 2.5rem;
+}
+.sidebar ul li a, .library .head a { /*Style for library-head*/
+    color: #b3b3b3;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.sidebar ul li a:hover {
+    color: #fff;
+}
+.sidebar ul li i {
+    font-size: 1.5rem;
+}
+/* Library */
+/* Library head */
+.library {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 0.6rem;
+}
+.library .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+}
+.library .head a img {
+    opacity: 0.6;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.library .head .icons {
+    display: flex;
+    gap: 0.8rem;
+    color: #b3b3b3
+}
+.library .head .icons i:hover, .library .head a:hover {
+    color: #fff;
+}
+.library .head a:hover>img {
+    opacity: 1;
+}
+/* Library-cards */
+.library .lib-cards {
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.library .lib-cards .cards {
+    background-color: #232323;
+    border-radius: 0.6rem;
+    margin: 0.5rem 0;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.library .lib-cards .cards .instruct {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.library .lib-cards .cards .instruct .instruct-h {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.library .lib-cards .cards .instruct .instruct-b {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.library .lib-cards .cards .action .badge {
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    border: none;
+    border-radius: 1rem / 50%;
+}
+.library .lib-cards .cards .action .badge:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .main-content {
