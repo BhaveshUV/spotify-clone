@@ -17,10 +17,13 @@ body {
 }
 
 /* Sidebar */
-
+/* Nav */
 .sidebar {
     background-color: #000;
     border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 .sidebar ul {
     margin: 0;
@@ -31,11 +34,11 @@ body {
     flex-direction: column;
     list-style: none;
 }
-.sidebar ul li {
+.sidebar ul li, .library .head>a { /*Style for library-head*/
     padding: 0.25rem 0.75rem;
     line-height: 2.5rem;
 }
-.sidebar ul li a {
+.sidebar ul li a, .library .head a { /*Style for library-head*/
     color: #b3b3b3;
     text-decoration: none;
     display: flex;
@@ -47,6 +50,36 @@ body {
 }
 .sidebar ul li i {
     font-size: 1.5rem;
+}
+/* Library */
+.library {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 0.6rem;
+}
+.library .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+}
+.library .head a img {
+    opacity: 0.6;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.library .head .icons {
+    display: flex;
+    gap: 0.8rem;
+    color: #b3b3b3
+}
+.library .head .icons i:hover, .library .head a:hover {
+    color: #fff;
+}
+.library .head a:hover>img {
+    opacity: 1;
 }
 
 .main-content {
