@@ -6,3 +6,29 @@ body {
     background-color: #000;
     color: #fff;
 }
+
+.main {
+    display: grid;
+    height: 100vh;
+    padding: 0.6rem;
+    grid-gap: 0.6rem;
+    grid-template-rows: 9fr 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+.sidebar {
+    background-color: #121212;
+    border-radius: 0.6rem;
+}
+
+.main-content {
+    background-color: #121212;
+    border-radius: 0.6rem;
+    overflow: auto;
+}
+
+.music-player {
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
