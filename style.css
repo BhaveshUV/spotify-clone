@@ -52,6 +52,7 @@ body {
     font-size: 1.5rem;
 }
 /* Library */
+/* Library head */
 .library {
     background-color: #121212;
     display: flex;
@@ -80,6 +81,46 @@ body {
 }
 .library .head a:hover>img {
     opacity: 1;
+}
+/* Library-cards */
+.library .lib-cards {
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.library .lib-cards .cards {
+    background-color: #232323;
+    border-radius: 0.6rem;
+    margin: 0.5rem 0;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.library .lib-cards .cards .instruct {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.library .lib-cards .cards .instruct .instruct-h {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.library .lib-cards .cards .instruct .instruct-b {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.library .lib-cards .cards .action .badge {
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    border: none;
+    border-radius: 1rem / 50%;
+}
+.library .lib-cards .cards .action .badge:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .main-content {
