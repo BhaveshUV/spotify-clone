@@ -148,7 +148,6 @@ body {
     cursor: pointer;
 }
 .main-content .top-nav div .icons {
-    display: inline-block;
     background-color: #000;
     height: 1rem;
     width: 1rem;
@@ -180,6 +179,11 @@ body {
     position: relative;
     left: -0.3rem;
     font-size: 1rem;
+}
+@media(max-width: 1000px) {
+    .hidden {
+        display: none;
+    }
 }
 
 .music-player {
