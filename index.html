@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="assets/logo.png">
     <title>Spotify - Web Player: Music for everyone</title>
 </head>
+
 <body>
     <div class="main">
         <div class="sidebar">
             <ul>
                 <li><a href="#" style="color: #fff;">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </a></li>
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a></li>
                 <li><a href=#>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span>Search</span>
-                </a></li>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>Search</span>
+                    </a></li>
             </ul>
             <div class="library">
                 <div class="head">
@@ -150,7 +156,26 @@
                 <img src="assets/music-player-assets/album_icon1.png" alt="like">
                 <img src="assets/music-player-assets/album_icon2.png" id="icon2">
             </div>
-            <div class="player-controls"></div>
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <div class="left-side-controls">
+                        <img src="assets/player_icon1.png">
+                        <img src="assets/player_icon2.png">
+                    </div>
+                    <div class="pause-play">
+                        <img src="assets/player_icon3.png">
+                    </div>
+                    <div class="right-side-controls">
+                        <img src="assets/player_icon4.png">
+                        <img src="assets/player_icon5.png">
+                    </div>
+                </div>
+                <div class="playbar">
+                    <span class="curr-time">00:00</span>
+                    <input type="range" min="0" max="100" step="1">
+                    <span class="tot-time">3:33</span>
+                </div>
+            </div>
             <div class="extra-controls"></div>
         </div>
     </div>

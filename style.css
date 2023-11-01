@@ -278,6 +278,7 @@ body {
     border-top:2px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Music player */
 .music-player {
     background-color: black;
     grid-column-start: 1;
@@ -286,6 +287,7 @@ body {
     align-items: center;
     padding: 0 0.25rem;
 }
+/*Music player - Current Music */
 .current-music {
     display: flex;
     align-items: center;
@@ -312,7 +314,7 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
 }
-.music-player .song-deets #owner {
+.music-player .song-deets #owner, .player-controls .playbar span {
     font-size: 0.65rem;
     color: #b3b3b3;
     font-weight: 900;
@@ -325,4 +327,78 @@ body {
     /* width: 1.5rem; */
     position: relative;
     top: 0.1rem;
+}
+/* Music player - Player Controls*/
+.music-player .player-controls {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.music-player .control-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.player-controls .left-side-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-grow: 1;
+}
+.player-controls .left-side-controls, .player-controls .right-side-controls img {
+    height: 1rem;
+}
+.player-controls .pause-play img{
+    height: 2rem;
+    vertical-align: middle;
+}
+.player-controls .right-side-controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-grow: 1;
+}
+.music-player .control-buttons div:not(.pause-play) img {
+    opacity: 0.65;
+}
+.music-player .control-buttons div img:hover {
+    opacity: 1;
+}
+.music-player .control-buttons .pause-play img:hover{
+    transform: scale(1.1);
+}
+.player-controls .playbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+.player-controls .playbar span {
+    line-height: 1;
+}
+.player-controls .playbar input[type="range"] {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+}
+.player-controls .playbar input[type="range"]::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 4px / 50%;
+    height: 0.2rem;
+}
+.player-controls .playbar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    background-color: #1bd760;
+    margin-top: -0.25rem;
+}
+.player-controls .playbar input[type="range"]:hover {
+    cursor: pointer;
 }
