@@ -386,12 +386,12 @@ body {
     appearance: none;
     background-color: transparent;
 }
-.player-controls .playbar input[type="range"]::-webkit-slider-runnable-track{
+:is(.extra-controls input[type="range"], .player-controls .playbar input[type="range"])::-webkit-slider-runnable-track{ /* Also for range input in extra control panel*/
     background-color: #ddd;
     border-radius: 4px / 50%;
     height: 0.2rem;
 }
-.player-controls .playbar input[type="range"]::-webkit-slider-thumb {
+:is(.extra-controls input[type="range"], .player-controls .playbar input[type="range"])::-webkit-slider-thumb {
     appearance: none;
     height: 0.75rem;
     width: 0.75rem;
@@ -399,6 +399,44 @@ body {
     background-color: #1bd760;
     margin-top: -0.25rem;
 }
-.player-controls .playbar input[type="range"]:hover {
+:is(.player-controls .playbar input[type="range"], .extra-controls input[type="range"]):hover {
     cursor: pointer;
+}
+
+/* Music player - Extra Controls*/
+.music-player .extra-controls {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}
+.music-player .extra-controls #img1 {
+    height: 2.5rem;
+}
+.music-player .extra-controls #img3 {
+    height: 1rem;
+}
+.music-player .extra-controls .vol-frame {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url(assets/music-player-assets/controls_icon5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -2px -6px;
+    transform: scale(1.1);
+}
+.music-player .extra-controls #img4 {
+    height: 2.75rem;
+}
+.extra-controls input[type="range"] {
+    width: 6rem;
+    appearance: none;
+    background-color: transparent;
+}
+.music-player .extra-controls img, .vol-frame {
+    opacity: 0.5;
+}
+:is(.music-player .extra-controls img, .vol-frame):hover {
+    opacity: 1;
 }
