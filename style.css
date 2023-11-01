@@ -8,6 +8,7 @@ body {
 }
 
 .main {
+    box-sizing: border-box;
     display: grid;
     height: 100vh;
     padding: 0.6rem;
@@ -277,8 +278,176 @@ body {
     border-top:2px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Music player */
 .music-player {
     background-color: black;
     grid-column-start: 1;
     grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    padding: 0 0.25rem;
+    min-width: 670px;
+}
+/*Music player - Current Music */
+.current-music {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 25%;
+}
+.img-frame {
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    background-image: url(assets/music-player-assets/album_picture.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.3rem;
+    margin-right: 0.5rem;
+}
+.music-player .song-deets {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+}
+.music-player .song-deets a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.music-player .song-deets #owner, .player-controls .playbar span {
+    font-size: 0.65rem;
+    color: #b3b3b3;
+    font-weight: 900;
+}
+.current-music img {
+    cursor: pointer;
+}
+.current-music #icon2 {
+    height: 2.1rem;
+    /* width: 1.5rem; */
+    position: relative;
+    top: 0.1rem;
+}
+/* Music player - Player Controls*/
+.music-player .player-controls {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.music-player .control-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.player-controls .left-side-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-grow: 1;
+}
+.player-controls .left-side-controls, .player-controls .right-side-controls img {
+    height: 1rem;
+}
+.player-controls .pause-play img{
+    height: 2rem;
+    vertical-align: middle;
+}
+.player-controls .right-side-controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-grow: 1;
+}
+.music-player .control-buttons div:not(.pause-play) img {
+    opacity: 0.65;
+}
+.music-player .control-buttons div img:hover {
+    opacity: 1;
+}
+.music-player .control-buttons .pause-play img:hover{
+    transform: scale(1.1);
+}
+.player-controls .playbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+.player-controls .playbar span {
+    line-height: 1;
+}
+.player-controls .playbar input[type="range"] {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+}
+:is(.extra-controls input[type="range"], .player-controls .playbar input[type="range"])::-webkit-slider-runnable-track{ /* Also for range input in extra control panel*/
+    background-color: #ddd;
+    border-radius: 4px / 50%;
+    height: 0.2rem;
+}
+:is(.extra-controls input[type="range"], .player-controls .playbar input[type="range"])::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    background-color: #1bd760;
+    margin-top: -0.25rem;
+}
+:is(.player-controls .playbar input[type="range"], .extra-controls input[type="range"]):hover {
+    cursor: pointer;
+}
+
+/* Music player - Extra Controls*/
+.music-player .extra-controls {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}
+.music-player .extra-controls #img1 {
+    height: 2.5rem;
+}
+.music-player .extra-controls #img3 {
+    height: 1rem;
+}
+.music-player .extra-controls .vol-frame {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    background-image: url(assets/music-player-assets/controls_icon5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -2px -6px;
+    transform: scale(1.1);
+}
+.music-player .extra-controls #img4 {
+    height: 2.75rem;
+}
+.extra-controls input[type="range"] {
+    width: 6rem;
+    appearance: none;
+    background-color: transparent;
+}
+.music-player .extra-controls img, .vol-frame {
+    opacity: 0.5;
+}
+:is(.music-player .extra-controls img, .vol-frame):hover {
+    opacity: 1;
+}
+@media(max-width: 930px){
+    #img1 {
+        display: none;
+    }
+}
+@media(max-width: 785px){
+    #icon2, #img2 {
+        display: none;
+    }
 }
