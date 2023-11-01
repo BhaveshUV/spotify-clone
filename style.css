@@ -286,6 +286,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 0.25rem;
+    min-width: 670px;
 }
 /*Music player - Current Music */
 .current-music {
@@ -295,8 +296,8 @@ body {
     width: 25%;
 }
 .img-frame {
-    height: 3.5rem;
-    width: 3.5rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
     background-image: url(assets/music-player-assets/album_picture.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -418,8 +419,8 @@ body {
     height: 1rem;
 }
 .music-player .extra-controls .vol-frame {
-    height: 1.5rem;
-    width: 1.5rem;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
     background-image: url(assets/music-player-assets/controls_icon5.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -439,4 +440,14 @@ body {
 }
 :is(.music-player .extra-controls img, .vol-frame):hover {
     opacity: 1;
+}
+@media(max-width: 930px){
+    #img1 {
+        display: none;
+    }
+}
+@media(max-width: 785px){
+    #icon2, #img2 {
+        display: none;
+    }
 }
